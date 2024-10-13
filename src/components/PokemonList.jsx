@@ -27,6 +27,7 @@ const PokemonList = () => {
           const { name, url } = poke;
           const pokeId = url.match(/\d/g).slice(1).join("");
           const imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeId}.png`;
+
           return (
             <Link
               to={`/pokemon/${pokeId}`}
@@ -37,7 +38,7 @@ const PokemonList = () => {
               }}
             >
               <figure>
-                <img src={imgUrl} id={imgUrl} className="w-48" />
+                <img src={imgUrl} className="w-48 poke-img" />
               </figure>
               <div className="card-body bg-base-200">
                 <h2 className="card-title justify-center">{name}</h2>
